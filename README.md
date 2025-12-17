@@ -1,48 +1,97 @@
-![NodeMCU V3 ESP8266 CH340](https://github.com/Gustavo-de-Lima-G-000-Akiko-Yuuuki/ESP8266-Wemos-NodeMCU-V3-ESP8266-CH340/blob/main/NodeMCU-V3-340G-Lua-WIFI-Module-Integration-Of-ESP8266-Extra-Memory-32M-Flash-1175347-descriptionImage0-1000x1000.webp?raw=true)
-![NodeMCU V3 ESP8266 CH340](https://github.com/Gustavo-de-Lima-G-000-Akiko-Yuuuki/ESP8266-Wemos-NodeMCU-V3-ESP8266-CH340/blob/main/Schematic_NodeMCU_ESP8266_32MB.webp?raw=true)
-![NodeMCU V3 ESP8266 CH340](https://github.com/Gustavo-de-Lima-G-000-Akiko-Yuuuki/ESP8266-Wemos-NodeMCU-V3-ESP8266-CH340/blob/main/PINOUT_WIFI-NodeM-ESP8266-CH340G.webp?raw=true)
+<!-- ========================= -->
+<!-- CAPA / VISÃO GERAL       -->
+<!-- ========================= -->
+
+<p align="center">
+  <img src="https://github.com/Gustavo-de-Lima-G-000-Akiko-Yuuuki/ESP8266-Wemos-NodeMCU-V3-ESP8266-CH340/blob/main/NodeMCU-V3-340G-Lua-WIFI-Module-Integration-Of-ESP8266-Extra-Memory-32M-Flash-1175347-descriptionImage0-1000x1000.webp?raw=true" width="420">
+</p>
 
 # ESP8266 – Wemos NodeMCU V3 (CH340 / CH341)
 
-Este repositório documenta uma **solução prática** para problemas recorrentes com placas **NodeMCU V3 ESP8266** de fabricação chinesa que utilizam os conversores USB-TTL **CH340 ou CH341**.
+Este repositório documenta **de forma organizada e prática** a utilização do **NodeMCU V3 ESP8266** com conversor **CH340 / CH341**, amplamente comercializado por fabricantes chineses.
 
-Esses modelos são amplamente vendidos como “Wemos NodeMCU V3”, porém **os drivers mais recentes distribuídos oficialmente costumam apresentar falhas**, impedindo o reconhecimento correto da placa no Windows.  
-A solução apresentada aqui foi obtida diretamente de **fontes chinesas confiáveis** e funciona de forma estável.
+O foco principal é **resolver problemas de driver no Windows**, muito comuns nesses modelos, além de centralizar **informações técnicas, pinout e esquemático** para facilitar o desenvolvimento.
+
+---
+
+## ❗ Contexto do problema
+
+Apesar de serem vendidos como **“Wemos NodeMCU V3”**, muitos desses módulos:
+
+- ❌ **Não utilizam componentes originais Wemos**
+- ❌ Vêm com **CH340 ou CH341** em variações pouco compatíveis
+- ❌ **Drivers oficiais mais recentes falham no Windows**
+- ❌ Não reconhecem porta COM ou apresentam erro intermitente
+
+✅ A solução apresentada neste repositório foi obtida a partir de **fontes chinesas confiáveis** e funciona de forma **estável e consistente**.
 
 ---
 
 ## 📌 Visão geral do hardware
 
-O **Wemos NodeMCU V3 ESP8266 CH340G** é baseado no popular **ESP8266 SoC da Espressif**, com um diferencial importante:
+<p align="center">
+  <img src="https://github.com/Gustavo-de-Lima-G-000-Akiko-Yuuuki/ESP8266-Wemos-NodeMCU-V3-ESP8266-CH340/blob/main/NodeMCU-V3-340G-Lua-WIFI-Module-Integration-Of-ESP8266-Extra-Memory-32M-Flash-1175347-descriptionImage0-1000x1000.webp?raw=true" width="420">
+</p>
 
-- 🔹 **Memória Flash ampliada para 32 MB**, ideal para projetos maiores
-- 🔹 Conversor USB-TTL **CH340G integrado**
+O **NodeMCU V3 ESP8266 CH340G** é baseado no popular **ESP8266 SoC da Espressif**, com um diferencial relevante:
+
+- 🔹 **Memória Flash ampliada para 32 MB**
+- 🔹 Conversor USB-TTL **CH340G / CH341**
 - 🔹 Conector **Micro-USB**
-- 🔹 Compatível com **Arduino IDE** e **Lua (NodeMCU)**
+- 🔹 Compatível com **Arduino IDE** e **NodeMCU (Lua)**
+
+Essa memória extra torna a placa ideal para projetos maiores e uso de bibliotecas extensas.
 
 ---
 
 ## ⚙️ Especificações técnicas
 
-- **Chip principal:** ESP8266 (Espressif)
-- **Memória Flash:** 32 MB (extra)
-- **Conversor USB:** CH340G / CH341
-- **Alimentação:**  
+- **SoC:** ESP8266 (Espressif)
+- **Memória Flash:** 32 MB
+- **USB-TTL:** CH340G / CH341
+- **Alimentação:**
   - 4,9 a 9 V DC via pino **VIN**
-- **GPIOs:**  
-  - 9 pinos digitais (D0 – D8)  
-  - PWM, I²C, SPI, 1-Wire  
-  - 1 entrada analógica (**A0**)
-- **Wi-Fi:**  
-  - Modo Station  
-  - Access Point  
+- **GPIOs:**
+  - D0 a D8 (PWM, I²C, SPI, 1-Wire)
+  - ADC **A0**
+- **Wi-Fi:**
+  - Station
+  - Access Point
   - Web Server
-- **Dimensões:**  
+- **Dimensões:**
   - 49 × 26 × 5 mm (sem headers)
-- **Espaçamento dos pinos:**  
-  - 2,54 mm (0,1”)  
-  - 15 pinos × 2 linhas  
-  - Compatível com protoboard (sem solda)
+- **Passo dos pinos:**
+  - 2,54 mm (0,1”)
+  - 15 pinos × 2 linhas
+  - Compatível com protoboard
+
+---
+
+## 🧩 Pinout da placa
+
+<p align="center">
+  <img src="https://github.com/Gustavo-de-Lima-G-000-Akiko-Yuuuki/ESP8266-Wemos-NodeMCU-V3-ESP8266-CH340/blob/main/PINOUT_WIFI-NodeM-ESP8266-CH340G.webp?raw=true" width="520">
+</p>
+
+O pinout segue o padrão NodeMCU V3, facilitando a reutilização de projetos existentes e bibliotecas já consolidadas.
+
+---
+
+## 🧠 Esquemático elétrico
+
+<p align="center">
+  <img src="https://github.com/Gustavo-de-Lima-G-000-Akiko-Yuuuki/ESP8266-Wemos-NodeMCU-V3-ESP8266-CH340/blob/main/Schematic_NodeMCU_ESP8266_32MB.webp?raw=true" width="520">
+</p>
+
+O esquemático confirma:
+- Uso de **Flash de 32 MB**
+- Conversor **CH340G**
+- Reguladores e conexões padrão do ESP8266
+
+Útil para:
+- Diagnóstico de hardware  
+- Projetos customizados  
+- Estudo elétrico da placa  
 
 ---
 
@@ -51,12 +100,12 @@ O **Wemos NodeMCU V3 ESP8266 CH340G** é baseado no popular **ESP8266 SoC da Esp
 - API **orientada a eventos** para aplicações de rede
 - Pode atuar como:
   - Cliente Wi-Fi
-  - Ponto de acesso
-  - Servidor web
-- Programação via:
+  - Access Point
+  - Servidor Web
+- Programável via:
   - **Arduino IDE**
   - **Lua (NodeMCU Firmware)**
-- Ideal para projetos de:
+- Ideal para:
   - IoT
   - Automação
   - Monitoramento remoto
@@ -64,16 +113,16 @@ O **Wemos NodeMCU V3 ESP8266 CH340G** é baseado no popular **ESP8266 SoC da Esp
 
 ---
 
-## 🚨 Problema comum (e solução)
+## 🚨 Problema comum (drivers)
 
-Muitas placas vendidas como *NodeMCU V3* utilizam **CH340/CH341** com variações de firmware e **drivers incompatíveis com versões recentes do Windows**.
+### Sintomas mais frequentes
+- Porta COM não aparece
+- Erro de driver no Gerenciador de Dispositivos
+- Reconhecimento intermitente
+- Upload falhando na Arduino IDE
 
-📌 **Sintoma comum**
-- A placa não aparece na porta COM
-- Erros de driver ou reconhecimento intermitente
-
-📌 **Solução**
-- Utilizar o **driver específico** indicado neste repositório  
+### Solução
+- Utilizar **drivers específicos para CH340/CH341**, conforme indicado neste repositório
 - Evitar drivers genéricos mais recentes que causam conflito
 
 ---
@@ -81,22 +130,25 @@ Muitas placas vendidas como *NodeMCU V3* utilizam **CH340/CH341** com variaçõe
 ## 🛠️ Aplicações recomendadas
 
 - Projetos IoT de médio e grande porte
-- Aplicações com bibliotecas extensas
+- Aplicações com uso intenso de bibliotecas
 - Protótipos conectados à internet
 - Ambientes educacionais e makers
+- Testes de firmware e automação residencial
 
 ---
 
-## 📂 Categorias
+## 📂 Classificação
 
 - Placas de desenvolvimento IoT  
-- Conselhos de desenvolvimento  
-- Makers / Projetos experimentais  
+- ESP8266 / NodeMCU  
+- Makers & Embedded  
+- Automação e Wi-Fi  
 
 ---
 
 ## 📎 Observação final
 
-Apesar de ser comercializado como *Wemos*, este modelo **não é fabricado pela Wemos oficial**, e sim por terceiros. Ainda assim, com o driver correto, o funcionamento é **estável e confiável**.
+Apesar de ser comercializado como **Wemos NodeMCU**, este modelo **não é fabricado pela Wemos oficial**.  
+Ainda assim, com o **driver correto**, o funcionamento é **estável, confiável e plenamente utilizável em produção e estudos**.
 
-Se este material te ajudou, sinta-se à vontade para contribuir ou compartilhar a solução.
+Contribuições, correções e melhorias são bem-vindas.
