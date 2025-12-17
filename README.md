@@ -29,9 +29,7 @@ Apesar de serem vendidos como **“Wemos NodeMCU V3”**, muitos desses módulos
 
 ## 📌 Visão geral do hardware
 
-<p align="center">
-  <img src="https://github.com/Gustavo-de-Lima-G-000-Akiko-Yuuuki/ESP8266-Wemos-NodeMCU-V3-ESP8266-CH340/blob/main/NodeMCU-V3-340G-Lua-WIFI-Module-Integration-Of-ESP8266-Extra-Memory-32M-Flash-1175347-descriptionImage0-1000x1000.webp?raw=true" width="420">
-</p>
+
 
 O **NodeMCU V3 ESP8266 CH340G** é baseado no popular **ESP8266 SoC da Espressif**, com um diferencial relevante:
 
